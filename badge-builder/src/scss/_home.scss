@@ -1,0 +1,236 @@
+.wrapper {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+	.badge {
+		position: relative;
+			.badge-name {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				left: 59px;
+				top: 96px;
+				z-index: 3;
+				.pre-first-name {
+					border: none;
+					background: none;
+					color: white;
+					&::placeholder {
+						color: white;
+
+					}
+				}
+				.pre-last-name {
+					border: none;
+					background: none;
+					color: white;
+					&::placeholder {
+						color: white;
+					}
+				}
+			}
+		svg {
+			position: relative;
+			z-index: 2;
+		}
+		.image-prev {
+			height: 110px;
+			width: 125px;
+			position: absolute;
+			z-index: 1;
+			left: 51px;
+			top: 30px;
+
+			.filter {
+				background: rgba(0, 0, 0, 0.5);
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+			.img-prev {
+				width: 100%;
+			}
+		}
+	}
+	.badge-form{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+
+		p {
+			width: 279px;
+			height: 36px;
+			font-family: 'PP Neue Montreal';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 18px;
+			color: #191D1F;
+		}
+
+		.first {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 16px;
+			
+			label {
+				margin-bottom: 4px;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 24px;
+				color: #191D1F;
+			}
+
+			input {
+				margin-top: 4px;
+				width: 279px;
+				height: 40px;
+				border: 1px solid #75878F;
+				border-radius: 4px;
+				padding-left: 16px;
+			}
+		}
+
+		.last {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 16px;
+
+			label {
+				margin-bottom: 4px;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 24px;
+				color: #191D1F;
+			}
+
+			input {
+				margin-top: 4px;
+				width: 279px;
+				height: 40px;
+				border: 1px solid #75878F;
+				border-radius: 4px;
+				padding-left: 16px;
+			}
+		}
+
+		.image {
+			position: relative;
+
+			.drag-n-drop{
+				position: relative;
+				border: 2px dashed #D7D7DC;
+				border-radius: 4px;
+				width: 279px;
+				height: 168px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background-color: transparent;
+				cursor: pointer;
+
+				p {
+					width: unset;
+					color: #171717;
+					font-style: normal;
+					font-weight: 300;
+					font-size: 14px;
+					line-height: 16px;
+				}
+			}
+
+			.imgInp {
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+				width: 279px;
+				height: 168px;
+				cursor: pointer;
+			}
+
+			.clickable {
+				display: flex;
+				justify-content: center;
+				.click {
+					position: relative;
+					cursor: pointer;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 24px;
+					border-bottom: 1px solid #191D1F;
+
+					.imgInp1 {
+						position: absolute;
+						cursor: pointer;
+						top: 0;
+						left: 0	;
+						opacity: 0;
+						width: 78px;
+						height: 24px;
+					}
+				}
+			}
+		}
+
+		.submit {
+			margin-top: 24px;
+			width: 138px;
+			height: 40px;
+			border: 1px solid #75878F;
+			border-radius: 4px;
+			color: black;
+			background: transparent;
+			background-image: url('/dist/img/liquid.png');
+			background-repeat: repeat-x;
+			background-position: 0 -100%;
+			transition: 1.5s ease;
+			cursor: pointer;
+		}
+		.submit:hover{
+			background-position: center;
+			color: white;
+		  }
+		.submit:nth-child(1){
+			filter: hue-rotate(0deg);
+		}
+	}
+}
+
+.container{
+	width: 600px;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 30px;
+	align-items: center;
+  } 
+  
+  button{
+	width: 150px;
+	padding: 12px;
+	border-radius: 20px;
+	color: white;
+	border: 3px solid #284cff;
+	cursor: pointer;
+	background: transparent;
+	background-image: url('/dist/img/liquid.png');
+	background-repeat: repeat-x;
+	background-position: 0 -100%;
+	transition: 1.5s ease;
+  }
+  
+  button:hover{
+	background-position: center;
+  }
+  button:nth-child(1){
+	filter: hue-rotate(0deg);
+  }
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>Okta Badge Builder</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="dist/css/main.css" />
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<h1>Doner</h1>
+				<h2>Badge Builder</h2>
+			</div>
+			<div class="badge">
+				<svg width="278" height="170" viewBox="0 0 278 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8V162C0 166.418 3.58173 170 8.00001 170H270C274.418 170 278 166.418 278 162V8C278 3.58172 274.418 0 270 0H8ZM125.462 33C151.494 33 175.985 49.0864 175.985 84.5589L176 84.4411C176 119.987 151.509 136 125.476 136H51V33H125.462Z" fill="#F4F3F1"/>
+					<path d="M0 33H1C28.6142 33 51 55.3858 51 83V86C51 113.614 28.6142 136 1 136H0V33Z" fill="#171717"/>
+					<rect x="10" y="64.5" width="10" height="40" rx="5" fill="white"/>
+					<path d="M226.985 84.5589C226.985 49.0864 202.27 33 176 33L176.015 65.1238L176 105.406L176.015 136C202.285 136 227 119.987 227 84.4411" fill="#FB4F14"/>
+					<path d="M277.985 84.5589C277.985 49.0864 253.27 33 227 33L227.015 65.1238L227 105.406L227.015 136C253.285 136 278 119.987 278 84.4411" fill="#646A44"/>
+				</svg>
+				
+				<div class="image-prev">
+					<div class="filter"></div>
+					<img class="img-prev" src="#" alt="your image" />
+				</div>
+				<div class="badge-name">
+					<input 
+					type="text"
+					class="pre-first-name"
+					name="preFirstName"
+					id="preFirstName"
+					placeholder="First Name"
+					value=""
+					disabled >
+					
+					<input 
+					type="text"
+					name="preLastName"
+					id="preLastName"
+					class="pre-last-name"
+					disabled 
+					type="text"
+					placeholder="Last Name"
+					>
+				</div>
+			</div>
+			<form action="">
+				<div class="badge-form">
+					<p>Fill out the form and upload a headshot below to show what you’d like displayed on your badge.</p>
+					<div class="first">
+						<label for="firstName">First Name</label>
+						<input type="text" name="firstName" id="firstName" class="first-name" value="" placeholder="Input Text" required>
+					</div>
+					<div class="last">
+						<label for="lastName">Last Name</label>
+						<input type="text" name="lastName" id="lastName"  class="last-name" value=""  placeholder="Input Text" required>
+					</div>
+					<div class="image">
+						<div class="drag-n-drop-area">
+							<label for="imageInp" class="drag-n-drop">
+								<svg width="49" height="50" viewBox="0 0 49 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M42.5075 20.9983V35.0042C42.5075 39.4243 38.9243 43.0075 34.5042 43.0075H14.4958C10.0757 43.0075 6.49249 39.4243 6.49249 35.0042V14.9958C6.49249 10.5757 10.0757 6.99249 14.4958 6.99249H26.5008" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M6.49249 27.0008L9.08389 24.4094C9.98857 23.5047 11.2156 22.9965 12.495 22.9965C13.7744 22.9965 15.0014 23.5047 15.9061 24.4094L24.5 33.0033" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M14.5018 43.0075L27.0974 30.4119C28.9813 28.528 32.0357 28.528 33.9196 30.4119L41.8012 38.2935" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M36.505 6.99249L31.5029 11.9946" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M41.5071 11.9946L36.505 6.99249" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M36.505 6.99249V16.9967" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<p>Drag and drop your image here.</p>		
+							</label>
+							<input accept="image/*" type='file' class="imgInp" name="imgInp">
+						</div>
+						<div class="clickable">
+							<label for="imgInp1" class="click">
+								Browse Files
+								<input accept="image/*" type='file' class="imgInp1" name="imgInp1">
+							</label>
+						</div>
+					</div>
+					<input value="Submit" class="submit">
+				</div>
+			</form>
+			<footer>© 2022 Doner Partners LLC. All Rights Reserved.</footer>
+		</div>
+		<script src="dist/js/html2canvas.js"></script>
+		<script>
+			let sendOff = document.querySelector('.submit')
+			const screenshotTarget = document.querySelector('.badge');
+
+			sendOff.addEventListener('click', function(event) {
+
+				html2canvas(document.querySelector(".badge")).then(canvas => {
+				document.body.appendChild(canvas)
+			});
+ 				html2canvas(screenshotTarget).then((canvas) => {
+    			const base64image = canvas.toDataURL("image/png");
+    			window.location.href = base64image;
+			});
+			})
+		</script>
+		<script src="dist/js/main.js"></script>
+	</body>
+</html>

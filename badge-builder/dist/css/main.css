@@ -1,0 +1,418 @@
+/* Imports ================================= */ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	height: 100%;
+	font-family: "PP Neue Montreal";
+}
+
+h1 {
+	font-size: 2.5rem;
+	letter-spacing: 0.25rem;
+}
+
+h2 {
+	font-family: "DM Sans", sans-serif;
+	font-size: 1.5rem;
+	font-style: bold;
+}
+
+h3 {
+	font-family: "DM Sans", sans-serif;
+	font-size: 1.125rem;
+	font-style: bold;
+}
+
+h4 {
+	font-family: "DM Sans", sans-serif;
+	font-size: 0.75rem;
+	letter-spacing: 0.125rem;
+	font-style: bold;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: "DM Sans", sans-serif;
+	font-size: 0.938rem;
+	line-height: 1.563rem;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.wrapper .badge {
+	position: relative;
+}
+.wrapper .badge .badge-name {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 59px;
+	top: 96px;
+	z-index: 3;
+}
+.wrapper .badge .badge-name .pre-first-name {
+	border: none;
+	background: none;
+	color: white;
+}
+.wrapper .badge .badge-name .pre-first-name::-webkit-input-placeholder {
+	color: white;
+}
+.wrapper .badge .badge-name .pre-first-name:-ms-input-placeholder {
+	color: white;
+}
+.wrapper .badge .badge-name .pre-first-name::placeholder {
+	color: white;
+}
+.wrapper .badge .badge-name .pre-last-name {
+	border: none;
+	background: none;
+	color: white;
+}
+.wrapper .badge .badge-name .pre-last-name::-webkit-input-placeholder {
+	color: white;
+}
+.wrapper .badge .badge-name .pre-last-name:-ms-input-placeholder {
+	color: white;
+}
+.wrapper .badge .badge-name .pre-last-name::placeholder {
+	color: white;
+}
+.wrapper .badge svg {
+	position: relative;
+	z-index: 2;
+}
+.wrapper .badge .image-prev {
+	height: 110px;
+	width: 125px;
+	position: absolute;
+	z-index: 1;
+	left: 51px;
+	top: 30px;
+}
+.wrapper .badge .image-prev .filter {
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.wrapper .badge .image-prev .img-prev {
+	width: 100%;
+}
+.wrapper .badge-form {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.wrapper .badge-form p {
+	width: 279px;
+	height: 36px;
+	font-family: "PP Neue Montreal";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+	color: #191D1F;
+}
+.wrapper .badge-form .first {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 16px;
+}
+.wrapper .badge-form .first label {
+	margin-bottom: 4px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	color: #191D1F;
+}
+.wrapper .badge-form .first input {
+	margin-top: 4px;
+	width: 279px;
+	height: 40px;
+	border: 1px solid #75878F;
+	border-radius: 4px;
+	padding-left: 16px;
+}
+.wrapper .badge-form .last {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 16px;
+}
+.wrapper .badge-form .last label {
+	margin-bottom: 4px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	color: #191D1F;
+}
+.wrapper .badge-form .last input {
+	margin-top: 4px;
+	width: 279px;
+	height: 40px;
+	border: 1px solid #75878F;
+	border-radius: 4px;
+	padding-left: 16px;
+}
+.wrapper .badge-form .image {
+	position: relative;
+}
+.wrapper .badge-form .image .drag-n-drop {
+	position: relative;
+	border: 2px dashed #D7D7DC;
+	border-radius: 4px;
+	width: 279px;
+	height: 168px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	cursor: pointer;
+}
+.wrapper .badge-form .image .drag-n-drop p {
+	width: unset;
+	color: #171717;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+}
+.wrapper .badge-form .image .imgInp {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	width: 279px;
+	height: 168px;
+	cursor: pointer;
+}
+.wrapper .badge-form .image .clickable {
+	display: flex;
+	justify-content: center;
+}
+.wrapper .badge-form .image .clickable .click {
+	position: relative;
+	cursor: pointer;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 24px;
+	border-bottom: 1px solid #191D1F;
+}
+.wrapper .badge-form .image .clickable .click .imgInp1 {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 78px;
+	height: 24px;
+}
+.wrapper .badge-form .submit {
+	margin-top: 24px;
+	width: 138px;
+	height: 40px;
+	border: 1px solid #75878F;
+	border-radius: 4px;
+	color: black;
+	background: transparent;
+	background-image: url("/dist/img/liquid.png");
+	background-repeat: repeat-x;
+	background-position: 0 -100%;
+	transition: 1.5s ease;
+	cursor: pointer;
+}
+.wrapper .badge-form .submit:hover {
+	background-position: center;
+	color: white;
+}
+.wrapper .badge-form .submit:nth-child(1) {
+	-webkit-filter: hue-rotate(0deg);
+	        filter: hue-rotate(0deg);
+}
+
+.container {
+	width: 600px;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	gap: 30px;
+	align-items: center;
+}
+
+button {
+	width: 150px;
+	padding: 12px;
+	border-radius: 20px;
+	color: white;
+	border: 3px solid #284cff;
+	cursor: pointer;
+	background: transparent;
+	background-image: url("/dist/img/liquid.png");
+	background-repeat: repeat-x;
+	background-position: 0 -100%;
+	transition: 1.5s ease;
+}
+
+button:hover {
+	background-position: center;
+}
+
+button:nth-child(1) {
+	-webkit-filter: hue-rotate(0deg);
+	        filter: hue-rotate(0deg);
+}
+/*# sourceMappingURL=main.css.map */

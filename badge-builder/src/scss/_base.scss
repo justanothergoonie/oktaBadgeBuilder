@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-size: 16px;
+	height: 100%;
+	font-family: 'PP Neue Montreal';
+}
+
+h1 {
+	font-size: 2.5rem;
+	letter-spacing: 0.25rem;
+}
+
+h2 {
+	font-family: 'DM Sans', sans-serif;
+	font-size: 1.5rem;
+	// line-height: 1.563rem;
+	font-style: bold;
+}
+
+h3 {
+	font-family: 'DM Sans', sans-serif;
+	font-size: 1.125rem;
+	// line-height: 1.563rem;
+	font-style: bold;
+}
+
+h4 {
+	font-family: 'DM Sans', sans-serif;
+	font-size: 0.75rem;
+	letter-spacing: 0.125rem;
+	font-style: bold;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: 'DM Sans', sans-serif;
+	font-size: 0.938rem;
+	line-height: 1.563rem;
+}
+
